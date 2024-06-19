@@ -42,6 +42,15 @@
     },
     "facilitator": {
       "type": "string"
+    },
+    "info": {
+      "type": "component",
+      "repeatable": true,
+      "component": "info.info"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

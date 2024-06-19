@@ -880,6 +880,8 @@ export interface ApiSessioncardSessioncard extends Schema.CollectionType {
     date: Attribute.Date;
     profileimg: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     facilitator: Attribute.String;
+    info: Attribute.Component<'info.info', true>;
+    slug: Attribute.UID<'api::sessioncard.sessioncard', 'title'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
