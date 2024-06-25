@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_display_display2s",
+  "info": {
+    "displayName": "display2"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

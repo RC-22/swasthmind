@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_achivements_achivements",
+  "info": {
+    "displayName": "achivements"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "successfulcases": {
+      "type": "integer"
+    },
+    "satisfiedcustomer": {
+      "type": "integer"
+    },
+    "expertconsultants": {
+      "type": "integer"
+    }
+  }
+}

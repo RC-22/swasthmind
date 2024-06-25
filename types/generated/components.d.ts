@@ -10,6 +10,27 @@ export interface AbcAbc extends Schema.Component {
   };
 }
 
+export interface AbcAbc2 extends Schema.Component {
+  collectionName: 'components_abc_abc2s';
+  info: {
+    displayName: 'abc2';
+  };
+  attributes: {};
+}
+
+export interface AchivementsAchivements extends Schema.Component {
+  collectionName: 'components_achivements_achivements';
+  info: {
+    displayName: 'achivements';
+  };
+  attributes: {
+    title: Attribute.String;
+    successfulcases: Attribute.Integer;
+    satisfiedcustomer: Attribute.Integer;
+    expertconsultants: Attribute.Integer;
+  };
+}
+
 export interface DisplayDisplay extends Schema.Component {
   collectionName: 'components_display_displays';
   info: {
@@ -29,6 +50,17 @@ export interface DisplayDisplay1 extends Schema.Component {
   attributes: {};
 }
 
+export interface DisplayDisplay2 extends Schema.Component {
+  collectionName: 'components_display_display2s';
+  info: {
+    displayName: 'display2';
+  };
+  attributes: {
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    title: Attribute.String;
+  };
+}
+
 export interface DisplayviewDisplayview extends Schema.Component {
   collectionName: 'components_displayview_displayviews';
   info: {
@@ -37,6 +69,27 @@ export interface DisplayviewDisplayview extends Schema.Component {
   attributes: {
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     date: Attribute.Date;
+  };
+}
+
+export interface HomecarouselHomecarousel extends Schema.Component {
+  collectionName: 'components_homecarousel_homecarousels';
+  info: {
+    displayName: 'homecarousel';
+  };
+  attributes: {};
+}
+
+export interface HomecarouselHomecarousel1 extends Schema.Component {
+  collectionName: 'components_homecarousel_homecarousel1s';
+  info: {
+    displayName: 'homecarousel1';
+    description: '';
+  };
+  attributes: {
+    display: Attribute.Component<'display.display2', true>;
+    testimonials: Attribute.Component<'testimonials.testimonials', true>;
+    achivements: Attribute.Component<'achivements.achivements', true>;
   };
 }
 
@@ -124,13 +177,30 @@ export interface TagsTags extends Schema.Component {
   };
 }
 
+export interface TestimonialsTestimonials extends Schema.Component {
+  collectionName: 'components_testimonials_testimonials';
+  info: {
+    displayName: 'testimonials';
+  };
+  attributes: {
+    video: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    name: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'abc.abc': AbcAbc;
+      'abc.abc2': AbcAbc2;
+      'achivements.achivements': AchivementsAchivements;
       'display.display': DisplayDisplay;
       'display.display1': DisplayDisplay1;
+      'display.display2': DisplayDisplay2;
       'displayview.displayview': DisplayviewDisplayview;
+      'homecarousel.homecarousel': HomecarouselHomecarousel;
+      'homecarousel.homecarousel1': HomecarouselHomecarousel1;
       'info.info': InfoInfo;
       'main.main': MainMain;
       'sessioncard.beneficiaries': SessioncardBeneficiaries;
@@ -138,6 +208,7 @@ declare module '@strapi/types' {
       'sessioncard.keyfeatures': SessioncardKeyfeatures;
       'sessioncard.sessioncard': SessioncardSessioncard;
       'tags.tags': TagsTags;
+      'testimonials.testimonials': TestimonialsTestimonials;
     }
   }
 }

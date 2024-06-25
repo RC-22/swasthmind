@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "home": {
+      "displayName": "homecarousel1",
+      "type": "component",
+      "repeatable": true,
+      "component": "homecarousel.homecarousel1"
+    }
+  }
+}

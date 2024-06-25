@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_homecarousel_homecarousel1s",
+  "info": {
+    "displayName": "homecarousel1",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "display": {
+      "displayName": "display2",
+      "type": "component",
+      "repeatable": true,
+      "component": "display.display2"
+    },
+    "testimonials": {
+      "displayName": "testimonials",
+      "type": "component",
+      "repeatable": true,
+      "component": "testimonials.testimonials"
+    },
+    "achivements": {
+      "displayName": "achivements",
+      "type": "component",
+      "repeatable": true,
+      "component": "achivements.achivements"
+    }
+  }
+}
