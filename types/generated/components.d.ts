@@ -1,15 +1,5 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface AbcAbc extends Schema.Component {
-  collectionName: 'components_abc_abcs';
-  info: {
-    displayName: 'abc';
-  };
-  attributes: {
-    display: Attribute.Boolean;
-  };
-}
-
 export interface AbcAbc2 extends Schema.Component {
   collectionName: 'components_abc_abc2s';
   info: {
@@ -192,7 +182,6 @@ export interface TestimonialsTestimonials extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'abc.abc': AbcAbc;
       'abc.abc2': AbcAbc2;
       'achivements.achivements': AchivementsAchivements;
       'display.display': DisplayDisplay;
