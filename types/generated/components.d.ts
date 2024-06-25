@@ -66,6 +66,37 @@ export interface MainMain extends Schema.Component {
   };
 }
 
+export interface SessioncardBeneficiaries extends Schema.Component {
+  collectionName: 'components_sessioncard_beneficiaries';
+  info: {
+    displayName: 'beneficiaries';
+  };
+  attributes: {
+    description: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface SessioncardCancellationpolicy extends Schema.Component {
+  collectionName: 'components_sessioncard_cancellationpolicies';
+  info: {
+    displayName: 'cancellationpolicy';
+  };
+  attributes: {
+    description: Attribute.Text;
+  };
+}
+
+export interface SessioncardKeyfeatures extends Schema.Component {
+  collectionName: 'components_sessioncard_keyfeatures';
+  info: {
+    displayName: 'keyfeatures';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+  };
+}
+
 export interface SessioncardSessioncard extends Schema.Component {
   collectionName: 'components_sessioncard_sessioncards';
   info: {
@@ -102,6 +133,9 @@ declare module '@strapi/types' {
       'displayview.displayview': DisplayviewDisplayview;
       'info.info': InfoInfo;
       'main.main': MainMain;
+      'sessioncard.beneficiaries': SessioncardBeneficiaries;
+      'sessioncard.cancellationpolicy': SessioncardCancellationpolicy;
+      'sessioncard.keyfeatures': SessioncardKeyfeatures;
       'sessioncard.sessioncard': SessioncardSessioncard;
       'tags.tags': TagsTags;
     }

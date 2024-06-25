@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sessioncard_beneficiaries",
+  "info": {
+    "displayName": "beneficiaries"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

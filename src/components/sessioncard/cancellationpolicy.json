@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_sessioncard_cancellationpolicies",
+  "info": {
+    "displayName": "cancellationpolicy"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    }
+  }
+}

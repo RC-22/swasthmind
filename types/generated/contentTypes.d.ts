@@ -804,7 +804,9 @@ export interface ApiGroupsessionGroupsession extends Schema.CollectionType {
     Title: Attribute.String;
     for: Attribute.String;
     description: Attribute.Text;
-    sessioncard: Attribute.Component<'sessioncard.sessioncard', true>;
+    isavailable: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -837,14 +839,15 @@ export interface ApiSessionSession extends Schema.CollectionType {
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
-    keyfeatures: Attribute.Text;
-    whocanbenefit: Attribute.Text;
+    keyfeatures: Attribute.Component<'sessioncard.keyfeatures', true>;
     info: Attribute.Component<'info.info', true>;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     date: Attribute.Date;
     time: Attribute.String;
     facilitator: Attribute.String;
     tag: Attribute.Component<'tags.tags'>;
+    beneficiaries: Attribute.Component<'sessioncard.beneficiaries', true>;
+    cancellationpolicy: Attribute.Component<'sessioncard.cancellationpolicy'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -882,6 +885,11 @@ export interface ApiSessioncardSessioncard extends Schema.CollectionType {
     facilitator: Attribute.String;
     info: Attribute.Component<'info.info', true>;
     slug: Attribute.UID<'api::sessioncard.sessioncard', 'title'>;
+    keyfeatures: Attribute.Component<'sessioncard.keyfeatures', true>;
+    beneficiaries: Attribute.Component<'sessioncard.beneficiaries', true>;
+    cancellationpolicy: Attribute.Component<'sessioncard.cancellationpolicy'>;
+    for: Attribute.Enumeration<['College Students', 'High School Students']> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

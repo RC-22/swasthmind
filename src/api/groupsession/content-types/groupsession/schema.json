@@ -32,11 +32,10 @@
     "description": {
       "type": "text"
     },
-    "sessioncard": {
-      "displayName": "sessioncard",
-      "type": "component",
-      "repeatable": true,
-      "component": "sessioncard.sessioncard"
+    "isavailable": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

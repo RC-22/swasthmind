@@ -19,10 +19,9 @@
       "type": "text"
     },
     "keyfeatures": {
-      "type": "text"
-    },
-    "whocanbenefit": {
-      "type": "text"
+      "type": "component",
+      "repeatable": true,
+      "component": "sessioncard.keyfeatures"
     },
     "info": {
       "displayName": "info",
@@ -55,6 +54,16 @@
       "type": "component",
       "repeatable": false,
       "component": "tags.tags"
+    },
+    "beneficiaries": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sessioncard.beneficiaries"
+    },
+    "cancellationpolicy": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sessioncard.cancellationpolicy"
     }
   }
 }

@@ -51,6 +51,29 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "keyfeatures": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sessioncard.keyfeatures"
+    },
+    "beneficiaries": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sessioncard.beneficiaries"
+    },
+    "cancellationpolicy": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sessioncard.cancellationpolicy"
+    },
+    "for": {
+      "type": "enumeration",
+      "enum": [
+        "College Students",
+        "High School Students"
+      ],
+      "required": true
     }
   }
 }
