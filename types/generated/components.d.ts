@@ -21,6 +21,21 @@ export interface AchivementsAchivements extends Schema.Component {
   };
 }
 
+export interface BlogBlog extends Schema.Component {
+  collectionName: 'components_blog_blogs';
+  info: {
+    displayName: 'blog';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    date: Attribute.Date;
+    tag: Attribute.JSON;
+  };
+}
+
 export interface DisplayDisplay extends Schema.Component {
   collectionName: 'components_display_displays';
   info: {
@@ -62,12 +77,27 @@ export interface DisplayviewDisplayview extends Schema.Component {
   };
 }
 
+export interface FaqFaq extends Schema.Component {
+  collectionName: 'components_faq_faqs';
+  info: {
+    displayName: 'faq';
+  };
+  attributes: {
+    question: Attribute.String;
+    answer: Attribute.Blocks;
+  };
+}
+
 export interface HomecarouselHomecarousel extends Schema.Component {
   collectionName: 'components_homecarousel_homecarousels';
   info: {
     displayName: 'homecarousel';
+    description: '';
   };
-  attributes: {};
+  attributes: {
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    title: Attribute.String;
+  };
 }
 
 export interface HomecarouselHomecarousel1 extends Schema.Component {
@@ -184,10 +214,12 @@ declare module '@strapi/types' {
     export interface Components {
       'abc.abc2': AbcAbc2;
       'achivements.achivements': AchivementsAchivements;
+      'blog.blog': BlogBlog;
       'display.display': DisplayDisplay;
       'display.display1': DisplayDisplay1;
       'display.display2': DisplayDisplay2;
       'displayview.displayview': DisplayviewDisplayview;
+      'faq.faq': FaqFaq;
       'homecarousel.homecarousel': HomecarouselHomecarousel;
       'homecarousel.homecarousel1': HomecarouselHomecarousel1;
       'info.info': InfoInfo;

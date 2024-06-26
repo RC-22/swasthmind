@@ -12,11 +12,20 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "home": {
-      "displayName": "homecarousel1",
+    "carousel": {
       "type": "component",
       "repeatable": true,
-      "component": "homecarousel.homecarousel1"
+      "component": "homecarousel.homecarousel"
+    },
+    "testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "testimonials.testimonials"
+    },
+    "achivements": {
+      "type": "component",
+      "repeatable": true,
+      "component": "achivements.achivements"
     }
   }
 }

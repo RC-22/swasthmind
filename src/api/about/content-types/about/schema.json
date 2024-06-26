@@ -1,17 +1,22 @@
 {
   "kind": "collectionType",
-  "collectionName": "galleries",
+  "collectionName": "abouts",
   "info": {
-    "singularName": "gallery",
-    "pluralName": "galleries",
-    "displayName": " Gallery",
-    "description": ""
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "about"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
+    "forwho": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
     "image": {
       "allowedTypes": [
         "images",
@@ -22,11 +27,8 @@
       "type": "media",
       "multiple": true
     },
-    "venue": {
-      "type": "string"
-    },
-    "campaignName": {
-      "type": "string"
+    "whobenefits": {
+      "type": "json"
     }
   }
 }

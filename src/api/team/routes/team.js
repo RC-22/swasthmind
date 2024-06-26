@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * contact-us router
+ * team router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::contact-us.contact-us');
+module.exports = createCoreRouter('api::team.team');

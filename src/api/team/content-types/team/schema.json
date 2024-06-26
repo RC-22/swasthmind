@@ -1,17 +1,19 @@
 {
   "kind": "collectionType",
-  "collectionName": "galleries",
+  "collectionName": "teams",
   "info": {
-    "singularName": "gallery",
-    "pluralName": "galleries",
-    "displayName": " Gallery",
-    "description": ""
+    "singularName": "team",
+    "pluralName": "teams",
+    "displayName": "team"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
+    "name": {
+      "type": "string"
+    },
     "image": {
       "allowedTypes": [
         "images",
@@ -22,10 +24,13 @@
       "type": "media",
       "multiple": true
     },
-    "venue": {
-      "type": "string"
+    "medialinks": {
+      "type": "json"
     },
-    "campaignName": {
+    "description": {
+      "type": "text"
+    },
+    "role": {
       "type": "string"
     }
   }
