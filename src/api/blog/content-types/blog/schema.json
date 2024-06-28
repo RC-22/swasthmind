@@ -12,11 +12,28 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "blog": {
-      "displayName": "blog",
-      "type": "component",
-      "repeatable": true,
-      "component": "blog.blog"
+    "title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "date": {
+      "type": "date"
+    },
+    "tags": {
+      "type": "json"
     }
   }
 }

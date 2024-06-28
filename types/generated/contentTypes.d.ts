@@ -833,7 +833,11 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    blog: Attribute.Component<'blog.blog', true>;
+    title: Attribute.String;
+    Description: Attribute.RichText;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    date: Attribute.Date;
+    tags: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
