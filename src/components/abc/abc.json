@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_abc_abcs",
+  "info": {
+    "displayName": "abc"
+  },
+  "options": {},
+  "attributes": {
+    "display": {
+      "type": "boolean"
+    }
+  }
+}
