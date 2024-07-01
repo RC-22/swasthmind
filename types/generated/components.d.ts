@@ -201,9 +201,10 @@ export interface TestimonialsTestimonials extends Schema.Component {
   collectionName: 'components_testimonials_testimonials';
   info: {
     displayName: 'testimonials';
+    description: '';
   };
   attributes: {
-    video: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     name: Attribute.String;
     description: Attribute.Text;
   };

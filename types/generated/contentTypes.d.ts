@@ -838,6 +838,8 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     date: Attribute.Date;
     tags: Attribute.JSON;
+    Author: Attribute.String;
+    authorProfile: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -954,9 +956,9 @@ export interface ApiHomeHome extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    carousel: Attribute.Component<'homecarousel.homecarousel', true>;
-    testimonials: Attribute.Component<'testimonials.testimonials', true>;
     achivements: Attribute.Component<'achivements.achivements', true>;
+    testimonials: Attribute.Component<'testimonials.testimonials', true>;
+    videoLink: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

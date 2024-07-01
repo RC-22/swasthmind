@@ -34,6 +34,19 @@
     },
     "tags": {
       "type": "json"
+    },
+    "Author": {
+      "type": "string"
+    },
+    "authorProfile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
